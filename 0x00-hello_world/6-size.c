@@ -1,6 +1,5 @@
-#!/bin/bash
 #include <stdio.h>
-/*
+/**
 * main - print sereval sizeof
 * rerurn: 0
 */

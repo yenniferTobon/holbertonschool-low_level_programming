@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
 * main- only print one messaje con prinft
 * return: 0
