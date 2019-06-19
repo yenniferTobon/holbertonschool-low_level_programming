@@ -1,4 +1,3 @@
-#!/bin/bash
 /**
 * main- only print one messaje
 * return: 0
