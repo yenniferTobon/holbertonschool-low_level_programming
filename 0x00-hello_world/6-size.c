@@ -3,13 +3,12 @@
 * main - print sereval sizeof
 * rerurn: 0
 */
-int main(void){
-	int i;
-	double d;
-	char c;
-
-	printf("Size of an int is: %lu.\n", sizeof(i));
-	printf("Size of an double is: %lu.\n", sizeof(d));
-	printf("Size of an char is: %lu.\n", sizeof(c));
-	return(0);
+int main(void)
+{
+	printf("Size of a char: %d byte(s)\n", sizeof(char));
+	printf("Size of an int: %d byte(s)\n", sizeof(int));
+	printf("Size of a long int: %d byte(s)\n", sizeof(long));
+	printf("Size of a long long int: %d byte(s)\n", sizeof(double));
+	printf("Size of a float: %d byte(s)\n", sizeof(float));
+	return (0);
 }
