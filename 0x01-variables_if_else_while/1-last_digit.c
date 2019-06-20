@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* 
- * main - last digit greater 5 and less 6 
+/**
+ * main - last digit greater 5 and less 6
  * Return: 0
 */
 int main(void)

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* 
- * main - number positive, negative o zero 
- * Return : 0
+/**
+ * main - number positive, negative o zero
+ * Return: 0
  */
 
 int main(void)
