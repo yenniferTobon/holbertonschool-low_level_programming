@@ -9,15 +9,13 @@
 
 int _islower(int c)
 {
-	c = c + 48;
-
 	if (c >= 'a' && c <= 'z')
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
 

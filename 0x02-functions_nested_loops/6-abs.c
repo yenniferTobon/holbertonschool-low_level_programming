@@ -2,14 +2,16 @@
 #include <stdlib.h>
 
 /**
- * _abs
- *
- * Return: 0
+ * _abs - absolute value of integer
+ * @c: The number to be checked
+ * Return: to value
  */
 
 int _abs(int c)
 {
- 	int result = 0;
-	result = abs(c);
-	return (result);
+	if (c < 0)
+	{
+		c = -c;
+	}
+	return (c);
 }
