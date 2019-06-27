@@ -10,8 +10,8 @@
 
 int mul(int a, int b)
 {
-	int mul = 0;
+	int m = 0;
 
-	mul = a * b;
-	return (0);
+	m = a * b;
+	return (m);
 }
