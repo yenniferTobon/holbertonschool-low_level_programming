@@ -6,13 +6,12 @@
 int main(void)
 {
 	long int num1 = 1, num2 = 2, res = 0, sum = 2;
-	int cont = 0;
 
-	while cont = 0
+	while (1)
 	{
 		res = num1 + num2;
 		if (res > 4000000)
-			cont = 1;
+			break;
 		if (res % 2 == 0)
 			sum += res;
 		num1 = num2;
