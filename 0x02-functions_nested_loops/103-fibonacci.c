@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-* main - Entry point.
-* Return: Always 0 (success).
+* main - Fibonacci not exceed 4,000,000
+* Return: 0
 */
 int main(void)
 {
