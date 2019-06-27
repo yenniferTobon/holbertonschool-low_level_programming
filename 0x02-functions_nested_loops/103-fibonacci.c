@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
 * main - Fibonacci not exceed 4,000,000
 * Return: 0
 */
+
 int main(void)
 {
 	long int num1 = 1, num2 = 2, res = 0, sum = 2;
