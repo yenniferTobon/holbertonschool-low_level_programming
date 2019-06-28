@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_square - function that prints a square
+ * @size: The number of interactions
+ */
+
 void print_square(int size)
 {
 	int i, m;
