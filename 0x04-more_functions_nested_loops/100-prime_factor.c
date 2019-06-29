@@ -3,12 +3,12 @@
 
 /**
  * main - paint number prime factor of the number 612852475143
- * 
+ * Return: 0
  */
 
 int main(void)
 {
-	long numPrimo = 612852475143, i = 0;
+	long numPrimo = 1231952, i = 0;
 
 	for (i = 2; i < numPrimo; i++)
 	{
