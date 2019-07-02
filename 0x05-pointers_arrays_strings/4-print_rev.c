@@ -20,7 +20,7 @@ void print_rev(char *s)
 		}
 		i = i + 1;
 	}
-	for (i = tamano; i >= 0; i--)
+	for (i = tamano - 1; i >= 0; i--)
 	{
 		_putchar(*(s + i));
 	}
