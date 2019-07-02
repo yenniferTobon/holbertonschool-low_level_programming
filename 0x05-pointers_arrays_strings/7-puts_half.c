@@ -23,12 +23,24 @@ void puts_half(char *str)
 		i = i + 1;
 	}
 
-	i = (tamano - 1) / 2;
-
-	while (i <= tamano)
+	tamano = tamano - 1;
+	if ((tamano / 2) == 0)
 	{
-		i = i + 1;
-		_putchar(*(str + i));
+		i = tamano / 2;
+		while (i <= tamano)
+		{
+			i = i + 1;
+			_putchar(*(str + i));
+		}
+	}
+	else
+	{
+		i = (tamano - 1) / 2;
+		while (i <= tamano)
+		{
+			i = i + 1;
+			_putchar(*(str + i));
+		}
 	}
 	_putchar('\n');
 }
