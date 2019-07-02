@@ -22,8 +22,8 @@ void puts_half(char *str)
 		}
 		i = i + 1;
 	}
-
-	if ((tamano / 2) == 0)
+	tamano = tamano - 1;
+	if ((tamano % 2) == 0)
 	{
 		i = tamano / 2;
 		while (i < tamano)
