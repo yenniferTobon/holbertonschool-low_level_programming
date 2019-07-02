@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * puts_half - prints half of a string
- * @s: char input
+ * puts_half - half of a string
+ * @str: char input
  */
 
 void puts_half(char *str)
@@ -23,12 +23,12 @@ void puts_half(char *str)
 		i = i + 1;
 	}
 
-	i = tamano / 2;
+	i = (tamano - 1)/ 2;
 
-	while (i <= tamano -1 )
+	while (i <= tamano - 1)
 	{
-		_putchar(*(str + i));
 		i = i + 1;
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
