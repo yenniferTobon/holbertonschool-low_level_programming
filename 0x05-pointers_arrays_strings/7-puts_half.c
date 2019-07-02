@@ -23,9 +23,9 @@ void puts_half(char *str)
 		i = i + 1;
 	}
 
-	i = (tamano - 1)/ 2;
+	i = (tamano - 1) / 2;
 
-	while (i <= tamano - 1)
+	while (i <= tamano)
 	{
 		i = i + 1;
 		_putchar(*(str + i));
