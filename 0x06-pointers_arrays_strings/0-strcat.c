@@ -22,11 +22,12 @@ char *_strcat(char *dest, char *src)
 		tamano = tamano + 1;
 	}
 
-	 while (*(dest + tamanoFinal) != '\0')
-        {
-                tamanoFinal = tamanoFinal + 1;
-        }
+	while (*(dest + tamanoFinal) != '\0')
+	{
+		tamanoFinal = tamanoFinal + 1;
+	}
 
 	*(dest + tamanoFinal) = '\0';
+
 	return (dest);
 }
