@@ -3,13 +3,13 @@
 /**
  * _strcmp - compares two strings.
  * @s1: number int input
- * @s2:
- * Return:
+ * @s2: number int input
+ * Return: diference
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i= 0, diferencia = 0;
+	int i = 0, diferencia = 0;
 
 	for (i = 0; s2[i] != '\0'; i++)
 	{
