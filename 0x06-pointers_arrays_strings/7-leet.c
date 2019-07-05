@@ -6,29 +6,22 @@
  * Return: char
  */
 
-char *leet(char *)
+char *leet(char *a)
 {
 	int i = 0, j = 0;
+	char texto[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char numeros[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	char matrix[][] = {{ 'a' , 'A' },
-			{ 'e' , 'E' },
-			{ 'o' , 'O' },
-			{ 't' , 'T' },
-			{ 'l' , 'L' }};
-	int vector[5] = { '4' , '3' , '0' , '7' , '1' };
-
-	while (s[i] != 0)
+	i = 0;
+	while (a[i] != '\0')
 	{
-		char texto = s[i];
-
-		for (j = 0; j < 5; j++)
+		for (j = 0 ; j < 10 ; j++)
 		{
-			if (texto == matrix[j][0] || texto == matrix[j][1])
-			{
-				s[i] = texto[i];
-			}
+			if (a[i] == texto[j])
+				a[i] = numeros[j];
 		}
-		i = i + 1;
+		i++;
 	}
-	return (s);
+
+	return (a);
 }
