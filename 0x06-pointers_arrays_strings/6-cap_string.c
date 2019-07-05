@@ -1,40 +1,36 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * *cap_string - capitalizes all words of a string
- * @a: char in lowercase
- * Return: char
+ * cap_string - replaces a lowercase word in a string after signs or spaces
+ * @s: pointer to the string
+ * Return: s
  */
 
-char *cap_string(char *a)
+char *cap_string(char *s)
 {
-	int tamano = 0, i = 0, j = 0;
-	int vector[13] = {9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 125, 123, 32};
+	int a;
+	int flag;
 
-	while (*(a + tamano) != '\0')
+	flag = 0;
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		tamano = tamano + 1;
-	}
-
-
-	for (i = 0; i < tamano; i++)
-	{
-		for (j = 0; j <= 12; j++)
+		if (s[a] == ',' || s[a] == ';' || s[a] == '.' || s[a] == '!' ||
+		s[a] == '?' || s[a] == '"' ||
+		s[a] == '(' || s[a] == ')' || s[a] == '{' || s[a] == '}' ||
+		s[a] == ' ' || s[a] == '\t' || s[a] == '\n')
 		{
-			if (*(a + i) == vector[j])
-			{
-				int i2 = i + 1;
-
-				if ((*(a + i2) >= 65 && *(a + i2) <= 90) || (*(a + i2) >= 97 && *(a + i2) <= 122))
-				{
-					if (*(a + i2) >= 97 && *(a + i2) <= 122)
-					{
-						*(a + i2) = *(a + i2) - 32;
-					}
-				}
-			}
+			flag = 1;
+		}
+		else if ((flag == 1 && s[a] >= 97 && s[a] <= 122) ||
+		(s[0] >= 97 && s[0] <= 122))
+		{
+			s[a] -= 32;
+			flag = 0;
+		}
+		else
+		{
+			flag = 0;
 		}
 	}
-	return (a);
+	return (s);
 }
