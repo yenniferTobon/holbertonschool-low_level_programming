@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * reset_to_98 - takes a pointer to an int
- * @n: number int input
+ * *rot13 - function that encodes a string using
+ * @a: char input
+ * Return: char
  */
 
 char *rot13(char *a)
-
 {
 	/* local variable declaration */
 	int i, j;
