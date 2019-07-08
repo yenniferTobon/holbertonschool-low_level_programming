@@ -19,16 +19,17 @@ unsigned int _strspn(char *s, char *accept)
 		for (i = 0; *(accept + i) != '\0'; i++)
 		{
 
-			if (*(accept + cantidad) == *(s + i))
+			if (*(accept + i) == *(s + cantidad))
 			{
 				cantidad = cantidad + 1;
 				f = 1;
 				break;
 			}
 		}
-		if (f == 0)
+		if (f != 1)
+		{
 			break;
-	s++;
+		}
 	}
 	return (cantidad);
 }
