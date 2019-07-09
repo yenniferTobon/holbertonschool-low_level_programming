@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strspn - gets the length of a prefix substring
+ * *_strpbrk - searches a string for any of a set of bytes
  * @s: array s
- * @accept:
+ * @accept: char to input
  * Return: char
  */
 
+char *_strpbrk(char *s, char *accept)
