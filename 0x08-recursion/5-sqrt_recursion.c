@@ -9,11 +9,7 @@
 
 int funsqrt(int n, int m)
 {
-	if (n == 1)
-	{
-		return (n);
-	}
-	else if (m <= 0)
+	if (m <= 0)
 	{
 		return (-1);
 	}
@@ -37,7 +33,7 @@ int _sqrt_recursion(int n)
 {
 	int numRaiz = 0;
 
-	numRaiz = funsqrt(n, n / 2);
+	numRaiz = funsqrt(n, (n / 2) + 1);
 	return (numRaiz);
 }
 
