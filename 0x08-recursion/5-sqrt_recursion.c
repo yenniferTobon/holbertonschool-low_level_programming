@@ -1,40 +1,47 @@
 #include "holberton.h"
-
 /**
-* funsqrt - function recursive that return natural square
-* @n: number original input
-* @m: number original half input
-* Return: int square
-*/
+ * number - find number
+ * @n: for sqrt
+ * @num: sqrt
+ * Return: num
+ *
+ */
 
-int funsqrt(int n, int m)
+int number(int n, int num)
 {
-	if (m <= 0)
+	if (n % 10 == 2 || n % 10 == 3 || n % 10 == 7 || n % 10 == 8)
 	{
 		return (-1);
 	}
-	else if ((m * m) == n)
+
+	else if (num * num == n)
 	{
-		return (m);
+		return (num);
 	}
-	else
-	{
-		return (funsqrt(n, m - 1));
-	}
+
+	return (number(n, num + 1));
+
 }
-
 /**
- * _sqrt_recursion - function that returns the natural square root of a number
- * @n: number input
- * Return: int
+ * _sqrt_recursion - find natural sqrt
+ * @n: for sqrt
+ *
+ * Return: num
+ *
  */
-
 int _sqrt_recursion(int n)
 {
-	int numRaiz = 0;
+	if (n < 0)
+	{
+		return (-1);
+	}
 
-	numRaiz = funsqrt(n, (n / 2) + 1);
-	return (numRaiz);
+	if (n == 0)
+	{
+		return (0);
+	}
+
+	return (number(n, 1));
+
+
 }
-
-
