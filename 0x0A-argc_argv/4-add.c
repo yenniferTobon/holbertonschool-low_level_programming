@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, suma = 0, num1 = 0;
+	int i = 1, suma = 0, num1 = 0, j = 0;
 
-	while (i <= (argc - 1))
+	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; **(argv + 1) != '\0'; j++)
 		{
