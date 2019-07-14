@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - function that multiplies two numbers
  * @argc: number arguments input
@@ -7,11 +8,11 @@
  * Return: int result of the multiplication
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int mult = 0, num1 = 0, num2 = 0;
 
-	if (argc != 3)
+	if (argc < 2 || argv[2] == '\0' || argv[1] == '\0')
 	{
 		printf("%s\n", "Error");
 		return (1);
