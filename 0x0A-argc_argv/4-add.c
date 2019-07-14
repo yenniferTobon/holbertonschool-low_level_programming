@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - function adds positive numbers
  * @argc: number arguments input
@@ -7,7 +8,7 @@
  * Return: int result of the add
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i = 1, suma = 0, num1 = 0;
 
@@ -18,10 +19,10 @@ int main(int argc, char* argv[])
 	}
 	while (i <= (argc - 1))
 	{
-		if (**(argv +i) < 48 || **(argv + i) > 57)
+		if (**(argv + i) < 48 || **(argv + i) > 57)
 		{
 			printf("%s\n", "Error");
-			return (0);
+			return (1);
 		}
 		else
 		{
