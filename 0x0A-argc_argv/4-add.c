@@ -7,7 +7,7 @@
  * Return: int result of the add
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
 	int i = 1, suma = 0, num1 = 0;
 
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	while (i <= (argc - 1))
 	{
-		if (*argv[i] < 48 || *argv[i] > 57)
+		if (**(argv +i) < 48 || **(argv + i) > 57)
 		{
 			printf("%s\n", "Error");
 			return (0);
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			num1 = atoi(argv[i]);
 			suma = suma + num1;
 		}
-	i++;
+		i++;
 	}
 	printf("%d\n", suma);
 	return (0);
