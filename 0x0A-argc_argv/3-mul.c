@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 2 || argv[2] == '\0' || argv[1] == '\0')
 	{
-		puts("Error");
+		printf("%s\n", "Error");
 		return (1);
 	}
 
@@ -22,5 +22,5 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[2]);
 	mult = (num1 * num2);
 	printf("%d\n", mult);
-	return (1);
+	return (0);
 }
