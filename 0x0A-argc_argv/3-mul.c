@@ -11,7 +11,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 {
 	int mult = 0, num1 = 0, num2 = 0;
 
-	if (argc < 2 || argv[2] == '\0')
+	if (argc < 2 || argv[2] == '\0' || argv[1] == '\0')
 	{
 		printf("%s\n", "Error");
 		return (1);
