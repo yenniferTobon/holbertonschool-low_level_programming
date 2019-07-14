@@ -32,6 +32,6 @@ int main(int argc, char *argv[])
 		i++;
 	}
 	printf("%d\n", suma);
-	return (0);
+	return (suma);
 }
 
