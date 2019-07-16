@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	while (str[tamano] != '\0')
 		tamano = tamano + 1;
 
-	p = malloc(sizeof(char) * tamano);
+	p = malloc(sizeof(char) * tamano + 1);
 
 	if (p == NULL)
 		return (NULL);
@@ -28,5 +28,7 @@ char *_strdup(char *str)
 		*(p + i) = *(str + i);
 		i = i + 1;
 	}
+
+	*(p + tamano) = '\0';
 	return (p);
 }
