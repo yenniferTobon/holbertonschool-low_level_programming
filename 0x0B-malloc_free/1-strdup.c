@@ -10,8 +10,7 @@
 char *_strdup(char *str)
 {
 	char *p;
-	int i = 0;
-	int tamano = 0;
+	unsigned int i = 0, tamano = 0;
 
 	if (str == NULL)
 		return (NULL);
