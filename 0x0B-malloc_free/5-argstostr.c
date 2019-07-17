@@ -5,9 +5,52 @@
 #include <stdio.h>
 
 /**
- * *str_concat - concatenates two strings
- * @s1: array size 1
- * @s2: array size 2.1
+ * *argstostr - concatenates all the arguments of your program
+ * @ac: number arguments
+ * @av: array arguments
  * Return: char p
  */
-k
+
+char *argstostr(int ac, char **av)
+{
+	char *resp;
+	int i = 0, j = 0, aux = 0, size = 0;
+
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			;
+		}
+		size = size + j;
+		size++;
+	}
+	size++;
+
+	resp = malloc(sizeof(char) * size);
+
+	if (resp == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0 ; av[i][j] != '\0'; j++)
+		{
+			resp[aux] = av[i][j];
+			aux++;
+		}
+		resp[aux] = '\n';
+		aux++;
+	}
+
+	resp[aux] = '\0';
+	return (resp);
+}
+
