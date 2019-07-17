@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1[i] != '\0'; i++)
 		*(p + i) = *(s1 + i);
-	for (i = 0; i < sizes2 - 1; i++)
+	for (i = 0; s2[i] != '\0'; i++)
 		*(p + (i + sizes1)) = *(s2 + i);
 
 	*(p + sizeTotal) = '\0';
