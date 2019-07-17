@@ -12,46 +12,41 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *p;
-	unsigned int i = 0, l = 0, sizes1 = 0, sizes2 = 0, sizeTotal = 0;
+	char *resp;
+	unsigned int i, j;
 
 	if (s1 == NULL)
-		s1 = "";
+	{
+	s1 = "";
+	}
 	if (s2 == NULL)
-		s1 = "";
-
-	while (*(s1 + l) != '\0')
 	{
-		sizes1 = sizes1 + 1;
-		l++;
+	s2 = "";
 	}
-	l = 0;
-	while (*(s2 + l) != '\0')
-	{
-		sizes2 = sizes2 + 1;
-		l++;
-	}
-	l = 0;
-	while (*(s2 + l) != '\0')
-	{
-		sizes2 = sizes2 + 1;
-		l++;
-	}
-
-	sizeTotal = sizes1 + sizes2;
-	p = malloc(sizeTotal + 1);
-
-	if (p == NULL)
-		return (NULL);
-
 	for (i = 0; s1[i] != '\0'; i++)
-		*(p + i) = *(s1 + i);
-	for (i = 0; s2[i] != '\0'; i++)
-		*(p + (i + sizes1)) = *(s2 + i);
-
-	*(p + sizeTotal) = '\0';
-
-	return (p);
+	{
+		;
+	}
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		;
+	}
+		resp = malloc(i + j + 1);
+	if (resp == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		resp[i] = s1[i];
+	}
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		resp[i + j] = s2[j];
+	}
+	resp[i + j] = '\0';
+	return (resp);
 }
+
 
 
