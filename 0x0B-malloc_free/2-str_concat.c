@@ -6,7 +6,7 @@
 /**
  * *str_concat - concatenates two strings
  * @s1: array size 1
- * @s2: array size 2
+ * @s2: array size 2.1
  * Return: char p
  */
 
