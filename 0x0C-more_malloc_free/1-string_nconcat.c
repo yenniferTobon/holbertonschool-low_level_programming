@@ -35,18 +35,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= j)
 	{
-		for (j = 0; s2[j] != '\0'; s2++)
+		for (j = 0; s2[j] != '\0'; j++)
 		{
 			resp[i + j] = s2[j];
 		}
 	}
 	else
 	{
-		for (j = 0; j < n; j++)
+		for (j = 0; j <= n; j++)
 		{
 			resp[j + i] = s2[j];
 		}
 	}
-	resp[i + n] = '\0';
+	resp[i + n + 1] = '\0';
 	return (resp);
 }
