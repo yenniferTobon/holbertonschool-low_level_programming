@@ -11,22 +11,27 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, suma = 0, num1 = 0, j = 0;
+        int i = 1, suma = 0, num1 = 0;
 
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; *(*(argv + i) + j) != '\0'; j++)
-		{
-			if (isdigit(*(*(argv + i) + j)) == 0)
-			{
-				printf("%s", "Error\n");
-				return (1);
-			}
-		}
-		num1 = atoi(argv[i]);
-		suma = suma + num1;
-	}
-	printf("%d\n", suma);
-	return (suma);
+        if (argc < 2 || argv[1] == '\0')
+        {
+                printf("%d\n", 0);
+                return (0);
+        }
+        while (i <= (argc - 1))
+        {
+                if (**(argv + i) < 48 || **(argv + i) > 57)
+                {
+                        printf("%s\n", "Error");
+                        return (1);
+                }
+                else
+                {
+                        num1 = atoi(argv[i]);
+                        suma = suma + num1;
+                }
+                i++;
+        }
+		printf("%d\n", suma);
+        return (0);
 }
-

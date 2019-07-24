@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+/**
+* wildcmp - compares two strings and returns 1 else 0
+* @s1: pointer 1
+* @s2: pointer 2
+* Return: int
+*/
+
+int wildcmp(char *s1, char *s2)
+{
+}
