@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
+#include <stdio.h>
 #include <string.h>
+#include "3-calc.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -40,4 +40,5 @@ int main(int argc, char *argv[])
 	}
 	result = ((get_op_func(argv[2]))(num1, num2));
 	printf("%d\n", result);
+	return (0);
 }
