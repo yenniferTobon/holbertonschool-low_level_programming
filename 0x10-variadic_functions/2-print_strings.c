@@ -3,8 +3,8 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - prints strings, followed by a new line
- * @separador: string pritns between numbers
+ * print_strings - prints strings
+ * @separator: string pritns between numbers
  * @n: integers passed to the funtion
  **/
 
