@@ -12,6 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list argumentos;
 
 	unsigned int i = 0;
+
 	int suma = 0;
 
 	if (n == 0)
