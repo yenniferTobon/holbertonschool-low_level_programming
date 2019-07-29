@@ -43,10 +43,10 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", (char)va_arg(arguments, int));
+				printf("%c", va_arg(arguments, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(arguments, int));
+				printf("%i", va_arg(arguments, int));
 				break;
 			case 'f':
 				printf("%f", (float)va_arg(arguments, double));
