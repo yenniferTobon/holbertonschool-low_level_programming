@@ -3,31 +3,6 @@
 #include "variadic_functions.h"
 
 /**
- * funt_valido - function that print valido
- * @format: input
- * @i: posicion
- * Return: 1 - OK, 0 fail
- **/
-int funt_valido(const char * const format, int i)
-{
-	int j = i + 1, sw = 0;
-
-	while (format[j] != '\0')
-	{
-		if ((format[i] ==  'c' ||
-		format[i] == 'i' || format[i] == 'f' || format[i] == 's') &&
-		(format[j] == 'c' || format[j] == 'i' || format[j] == 'f' ||
-		format[j] == 's'))
-		{
-			sw = 1;
-			break;
-		}
-		j++;
-	}
-	return (sw);
-}
-
-/**
  * print_all - function that prints anything.
  * @format: input
  **/
@@ -61,11 +36,12 @@ void print_all(const char * const format, ...)
 				printf("%s", palabra);
 				break;
 		}
-		sw = funt_valido(format, i);
-		switch (sw)
+		j = i + 1;
+		if ((format[i] ==  'c' ||
+		format[i] == 'i' || format[i] == 'f' || format[i] == 's') &&
+		(format[j] != '\0'))
 		{
-			case 1:
-				printf(", ");
+			printf(", ");
 		}
 		i++;
 	}
