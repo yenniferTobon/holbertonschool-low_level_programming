@@ -49,13 +49,13 @@ void print_all(const char * const format, ...)
 				printf("%i", va_arg(arguments, int));
 				break;
 			case 'f':
-				printf("%f", (float)va_arg(arguments, double));
+				printf("%f", va_arg(arguments, double));
 				break;
 			case 's':
 				palabra = va_arg(arguments, char*);
 				if (palabra == NULL)
 				{
-					printf("%s", "(nil)");
+					printf("(nil)");
 					break;
 				}
 				printf("%s", palabra);
