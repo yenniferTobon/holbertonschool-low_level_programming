@@ -27,7 +27,6 @@ int funt_valido(const char * const format, int i)
 	return (sw);
 }
 
-
 /**
  * print_all - function that prints anything.
  * @format: input
@@ -67,6 +66,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	printf("\n");
 	va_end(arguments);
+	printf("\n");
 }
