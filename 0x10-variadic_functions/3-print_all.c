@@ -1,20 +1,17 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
-
 /**
  * print_all - function that prints anything.
  * @format: input
  **/
-
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0;
 	char *palabra;
 	va_list arguments;
 
 	va_start(arguments, format);
-
 	while (format == NULL)
 	{
 		printf("\n");
@@ -43,13 +40,9 @@ void print_all(const char * const format, ...)
 				printf("%s", palabra);
 				break;
 		}
-		j = i + 1;
-		if ((format[i] ==  'c' ||
-		format[i] == 'i' || format[i] == 'f' || format[i] == 's') &&
-		(format[j] != '\0'))
-		{
+		if ((format[i] ==  'c' || format[i] == 'i' || format[i] == 'f'
+		|| format[i] == 's') && (format[i + 1] != '\0'))
 			printf(", ");
-		}
 		i++;
 	}
 	va_end(arguments);
