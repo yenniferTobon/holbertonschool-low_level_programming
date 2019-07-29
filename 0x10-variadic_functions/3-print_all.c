@@ -6,9 +6,10 @@
  * print_all - function that prints anything.
  * @format: input
  **/
+
 void print_all(const char * const format, ...)
 {
-	int i = 0, sw = 0;
+	int i = 0, j = 0;
 	char *palabra;
 	va_list arguments;
 
