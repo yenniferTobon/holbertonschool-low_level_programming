@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 	{
 		if (listavarios->str == NULL)
 		{
-			printf("[%d] %s\n", 0, "(nill)");
+			printf("[%d] %s\n", 0, "(nil)");
 			listavarios = listavarios->next;
 			size++;
 		}
