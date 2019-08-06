@@ -9,12 +9,10 @@
  **/
 size_t listint_len(const listint_t *h)
 {
- 	const listint_t *current = h;
+	const listint_t *current = h;
 	size_t size = 0;
 
-	if (h == NULL)
-		printf("%s", "NULL");
-	while(current != NULL)
+	while (current != NULL)
 	{
 		current = current->next;
 		size++;
