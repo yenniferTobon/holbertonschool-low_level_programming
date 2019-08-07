@@ -7,34 +7,51 @@
 * @n: Number to initialize the new node.
 * Return: Pointer to the node at index, or NULL if the index doesn't exist.
 */
+#include <stdlib.h>
+#include "lists.h"
+
+/**
+ * insert_nodeint_at_index - inserts a new node at a given position
+ * @head: head list
+ * @idx: indice
+ * @n: value the n
+ * Return: listint_t
+ **/
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *aux = *head, *Nodenew;
+	unsigned int position = 0;
+	listint_t *aux;
+	listint_t *newN;
 
-	if (((head == NULL) && (idx == 0)) || !head)
-		return (0);
-
-	while (idx > 1)
+	aux = *head;
+	if (head == NULL || *head == NULL)
 	{
-		aux = aux->next;
-		if (!aux)
-			return (0);
-		idx--;
+		return (NULL);
 	}
-	Nodenew = malloc(sizeof(listint_t));
-	if (Nodenew == NULL)
-		return (0);
+
+	while ((aux != NULL) && (position != (idx - 1)))
+	{
+		aux = (aux)->next;
+		position++;
+	}
+
+	listint_t *newN = malloc(sizeof(listint_t));
+
+	if (newN == NULL)
+	{
+		return (NULL);
+	}
 	if (idx == 0)
 	{
-		*head = Nodenew;
-		Nodenew->next = aux;
+		newN->next = *head;
+		*head = newN;
 	}
 	else
 	{
-		Nodenew->next = aux->next;
-		aux->next = Nodenew;
+		newN->next = aux->next;
+		aux->next = newN;
 	}
-	Nodenew->n = n;
-	return (Nodenew);
+	newN->n = n;
+	return (newN);
 }
-
