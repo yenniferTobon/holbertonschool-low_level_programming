@@ -41,10 +41,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		aux->next = aux2->next;
 		free(aux2);
 	}
-	if ((*head)->next == NULL)
-	{
-		free(*head);
-		free(head);
-	}
 	return (1);
 }
