@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index -
- * @head:
- * @index:
+ * delete_nodeint_at_index - deletes the node at index index of a listint_t
+ * @head: input head
+ * @index: number node delete
  * Return: int
  **/
 
@@ -31,6 +31,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		aux = aux->next;
 		cont++;
+		if (aux == NULL)
+			return (-1);
 	}
 
 	if ((cont == index - 1) && (cont != 0))
