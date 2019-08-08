@@ -35,11 +35,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			return (-1);
 	}
 
-	if ((cont == index - 1) && (cont != 0))
-	{
-		aux2 = aux->next;
-		aux->next = aux2->next;
-		free(aux2);
-	}
+	aux2 = aux->next;
+	aux->next = aux2->next;
+	free(aux2);
 	return (1);
 }
