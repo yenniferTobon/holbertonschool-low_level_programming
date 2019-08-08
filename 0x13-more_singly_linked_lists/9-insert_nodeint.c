@@ -7,16 +7,6 @@
 * @n: Number to initialize the new node.
 * Return: Pointer to the node at index, or NULL if the index doesn't exist.
 */
-#include <stdlib.h>
-#include "lists.h"
-
-/**
- * insert_nodeint_at_index - inserts a new node at a given position
- * @head: head list
- * @idx: indice
- * @n: value the n
- * Return: listint_t
- **/
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -36,7 +26,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		position++;
 	}
 
-	listint_t *newN = malloc(sizeof(listint_t));
+	newN = malloc(sizeof(listint_t));
 
 	if (newN == NULL)
 	{
