@@ -62,4 +62,3 @@ unsigned int pow2(unsigned int b)
 	}
 	return (power);
 }
-
