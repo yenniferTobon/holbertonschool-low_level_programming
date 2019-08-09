@@ -1,4 +1,26 @@
 #include "holberton.h"
+
+/**
+ * pow2 - power
+ * @b: exponente
+ * Return: power number
+ **/
+
+unsigned int pow2(unsigned int b)
+{
+	unsigned int power = 1, i = 1;
+
+	if (b == 0)
+	{
+		return (1);
+	}
+	for (i = 0; i < b; i++)
+	{
+		power = power * 2;
+	}
+	return (power);
+}
+
 /**
  * print_binary - prints the binary representation of a number
  * @n: int a binary
@@ -39,26 +61,4 @@ void print_binary(unsigned long int n)
 		i--;
 		}
 	}
-}
-
-
-/**
- * pow2 - power
- * @b: exponente
- * Return: power number
- **/
-
-unsigned int pow2(unsigned int b)
-{
-	unsigned int power = 1, i = 1;
-
-	if (b == 0)
-	{
-		return (1);
-	}
-	for (i = 0; i < b; i++)
-	{
-		power = power * 2;
-	}
-	return (power);
 }
