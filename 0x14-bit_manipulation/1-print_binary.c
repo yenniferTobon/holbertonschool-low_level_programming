@@ -8,13 +8,11 @@
  **/
 void print_binary(unsigned long int n)
 {
-	int i = 0, position = 0, size = 0;
-	char *binary;
+	int i = 0, position = 0;
 
 	if (n == 0)
 	{
-		binary = malloc(sizeof(char));
-		binary[0] = '0';
+		_putchar('0');
 	}
 	else
 	{
@@ -22,9 +20,6 @@ void print_binary(unsigned long int n)
 		{
 			i++;
 		}
-		size = i;
-
-		binary = malloc(sizeof(char) * (i + 1));
 
 		if (pow2(i) != n)
 		{
@@ -35,23 +30,17 @@ void print_binary(unsigned long int n)
 		{
 			if (pow2(i) <= n)
 			{
-				binary[position] = '1';
+				_putchar('1');
 				n = n - pow2(i);
 			}
 			else
 			{
-				binary[position] = '0';
+				_putchar('0');
 			}
 		position++;
 		i--;
 		}
 	}
-
-	for (i = 0; i <= size; i++)
-	{
-		_putchar(binary[i]);
-	}
-	free(binary);
 }
 
 
