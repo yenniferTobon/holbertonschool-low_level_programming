@@ -6,9 +6,9 @@
  * Return: power number
  **/
 
-unsigned int pow2(unsigned int b)
+unsigned long pow2(unsigned int b)
 {
-	unsigned int power = 1, i = 1;
+	unsigned long power = 1, i = 1;
 
 	if (b == 0)
 	{
@@ -28,7 +28,7 @@ unsigned int pow2(unsigned int b)
  **/
 void print_binary(unsigned long int n)
 {
-	int i = 0, position = 0;
+	long i = 0, position = 0;
 
 	if (n == 0)
 	{
