@@ -49,11 +49,11 @@ int main(int argc, char **argv)
 		} else
 			break;
 	}
-	on_close = close(int_open);
-	if (on_close == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", int_open), exit(100);
 	on_close = close(int_open2);
 	if (on_close == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", int_open2), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", int_open2), exit(100);
+	on_close = close(int_open);
+	if (on_close == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", int_open), exit(100);
 	return (0);
 }
