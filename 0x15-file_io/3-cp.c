@@ -31,10 +31,10 @@ int main(int argc, char **argv)
 	}
 
 	int_open2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
 	if (int_open2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
+		exit(98);
 	}
 	while (1)
 	{
@@ -49,11 +49,11 @@ int main(int argc, char **argv)
 		} else
 			break;
 	}
-	on_close = close(int_open2);
-	if (on_close == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", int_open2), exit(100);
 	on_close = close(int_open);
 	if (on_close == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", int_open), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", int_open), exit(100);
+	on_close = close(int_open2);
+	if (on_close == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", int_open2), exit(100);
 	return (0);
 }
