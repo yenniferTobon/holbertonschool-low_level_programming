@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint: prints all the elements of a dlistint_t list.
+ * print_dlistint - prints all the elements of a dlistint_t list.
  * @h: head liked list
  * Return: size_t the size linked list
  **/
