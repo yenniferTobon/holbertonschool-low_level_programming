@@ -1,17 +1,17 @@
-#include <stdlib.h>
 #include "lists.h"
+
 /**
-* free_dlistint - Frees a linked list.
-* @head: Pointer to the first element of the list to be free'd.
-*/
+ * free_dlistint - function that free a dlistint_t list
+ * @head: head the list
+ **/
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *iterator;
+	dlistint_t *temp;
 
-	while (head)
+	while (head != NULL)
 	{
-		iterator = head->next;
-		free(head);
-		head = iterator;
+		temp = head;
+		head = head->next;
+		free(tmp);
 	}
 }
