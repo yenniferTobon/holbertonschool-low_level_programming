@@ -25,10 +25,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		}
 		else
 		{
-			if (aux->next != NULL)
-			{
-				aux = aux->next;
-			}
+			aux = aux->next;
 		}
 		i = i + 1;
 	}
