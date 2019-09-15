@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "lists.h"
 /**
 * free_dlistint - Frees a linked list.
