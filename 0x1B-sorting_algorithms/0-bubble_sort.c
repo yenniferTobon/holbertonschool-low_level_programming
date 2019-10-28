@@ -2,12 +2,23 @@
 #include <stdlib.h>
 #include "sort.h"
 
+/**
+ * bubble_sort - sorts array integers in ascending order with Bubble sort
+ * @array: list the integers
+ * @size: lenth array
+ *
+ **/
 void bubble_sort(int *array, size_t size)
 {
 	size_t num_Elements_Sort = 0, i = 0;
-        int item = 0;
+	int item = 0;
 
-	while(num_Elements_Sort <= size)
+	if (array == NULL || size == 0)
+	{
+		exit;
+	}
+
+	while (num_Elements_Sort <= size)
 	{
 		for (i = 0; i < size - 1; i++)
 		{
