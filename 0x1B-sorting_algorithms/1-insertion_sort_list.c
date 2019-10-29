@@ -9,16 +9,19 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *head = *list;
+	listint_t *head;
+
+	if (*list == NULL)
+	{
+		return;
+	}
 
 	if (*list != NULL && (*list)->next->next == NULL)
 	{
 		return;
 	}
-	if (*list == NULL)
-	{
-		return;
-	}
+
+	head = *list;
 	while (head != NULL)
 	{
 		while (head->prev != NULL && head->prev->n > head->n)
