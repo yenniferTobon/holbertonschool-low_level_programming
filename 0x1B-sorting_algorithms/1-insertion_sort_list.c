@@ -16,7 +16,7 @@ void insertion_sort_list(listint_t **list)
 		return;
 	}
 
-	if (*list != NULL && (*list)->next->next == NULL)
+	if (*list != NULL && (*list)->next == NULL)
 	{
 		return;
 	}
