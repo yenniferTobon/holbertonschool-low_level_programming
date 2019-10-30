@@ -51,7 +51,7 @@ int partition(int *array, int lo, int hi, size_t size)
 
 	while (j < hi)
 	{
-		if (array[j] < pivote)
+		if (array[j] <= pivote)
 		{
 			temp = array[i];
 			array[i] = array[j];
