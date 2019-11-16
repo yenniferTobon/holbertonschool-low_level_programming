@@ -5,7 +5,3 @@ OBJ = main.o holberton.o
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-holberton.o: holberton.c m.h
-
-main.o: main.c m.h
