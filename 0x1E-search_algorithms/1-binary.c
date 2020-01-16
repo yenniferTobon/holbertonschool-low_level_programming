@@ -11,12 +11,12 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t medium = 0, right = size - 1, aux = 0, left = 0;
+	size_t medium = 0, right = size - 1, iterator = 0, aux = 0, left = 0;
 
 	while (left <= right)
 	{
 		printf("Searching in array:");
-		for (size_t iterator = aux; iterator < size; iterator++)
+		for (iterator = aux; iterator < size; iterator++)
 		{
 			printf(" %d", array[iterator]);
 			if (iterator != size - 1)
