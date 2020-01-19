@@ -1,5 +1,8 @@
 #include "search_algos.h"
 #include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 
 /**
  * minimum_value - finds the minimum of two values
